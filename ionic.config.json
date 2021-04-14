@@ -1,0 +1,7 @@
+{
+  "name": "where-is-my-car",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
