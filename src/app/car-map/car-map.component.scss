@@ -1,0 +1,62 @@
+.map-container {
+  height: 70%;
+}
+
+.map-frame {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+.date-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+// SPINNER
+
+.spinner-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  color: rgb(19, 61, 177);
+}
+
+.spinner-container div {
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(19, 61, 177);
+  border-color: rgb(19, 61, 177) transparent rgb(19, 61, 177) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+    border-color: rgb(214, 54, 161) transparent rgb(177, 19, 106) transparent;
+  }
+  50% {
+    border-color: rgb(245, 229, 2) transparent rgb(235, 231, 20) transparent;
+  }
+  100% {
+    border-color: rgb(81, 214, 54) transparent rgb(32, 177, 19) transparent;
+    transform: rotate(360deg);
+  }
+}

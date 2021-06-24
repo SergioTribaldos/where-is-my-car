@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!(loading$ | async); else loading">
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div *ngIf="mode === 'where' && !dateLoading" class="date-container">
+    Aparcaste tu coche aqui el
+    {{ parkDate.seconds * 1000 | date: "dd/MM HH:mm" }}
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button *ngIf="mode === 'park'" (click)="parkCar()" expand="block"
+    >Aparcar</ion-button
+  >
+</ion-footer>
+
+<ng-template #loading>
+  <ion-content>
+    <div class="spinner-container">
+      <div>
+        <div class="lds-dual-ring"></div>
+        <div>Cargando...</div>
+      </div>
+    </div>
+  </ion-content>
+</ng-template>

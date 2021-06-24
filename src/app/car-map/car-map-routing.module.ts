@@ -1,12 +1,11 @@
-import { CarMapComponent } from '../car-map/car-map.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { CarMapComponent } from './car-map.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component: CarMapComponent,
   },
 ];
 
@@ -14,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HomePageRoutingModule {}
+export class CarMapRoutingModule {}
